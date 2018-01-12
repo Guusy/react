@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PlayList from './Components/PlayList/PlayList';
+import ListPlayLists from './Components/PlayList/ListPlayLists';
 
 import data from './api.json';
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
      
-     <PlayList data={data}/>
+     <ListPlayLists data={data}/>
       </div>
     );
   }

@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './media.css';
-import bitcoin from './../../images/covers/bitcoin.jpg';
 import PropTypes from "prop-types";
-export default class Media extends Component {
+export default class Media extends PureComponent {
   state= {
     author:this.props.author
   }
@@ -32,14 +31,12 @@ export default class Media extends Component {
         border:'1px solid red'
       }
     };*/
-    let urlImage= "./../."+this.props.cover;
-    console.log(urlImage)
-   let image = require(urlImage);
+   
     return (
       <div className="Media" onClick={this.handleClick} >
         <div>
         <img
-        src={image}
+        src={this.props.cover}
         width={260}
         height={160}
         />
