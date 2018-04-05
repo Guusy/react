@@ -5,5 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import Home from './pages/container/Home';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+import data from './api.json';
+
+ReactDOM.render(<Home data={data} />, document.getElementById('home-container'));
 registerServiceWorker();

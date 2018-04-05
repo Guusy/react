@@ -14,13 +14,9 @@ import FullScreen from './../../icons/components/FullScreen';
 export default function PlayList(props) {
     return (
       <div>
+       
         <div>
-          {props.data.title}
-          <hr/>
-          {props.data.description}
-        </div>
-        <div>
-          <Play
+       {/*   <Play
           size={30}
           color={'red'}
           />
@@ -36,8 +32,9 @@ export default function PlayList(props) {
           size={30}
           color={'blue'}
           />
-{
-  props.data.playlist.map(elemento=><Media key={elemento.id} {...elemento} />)
+       */}
+          {
+  props.playlist.map(elemento=><Media openModal={props.openModal} key={elemento.id} {...elemento} />)
 }
         </div>
         
